@@ -38,7 +38,7 @@ Features Implemented
 ## Installation
 1️⃣ Clone the repository
 
-$> git clone https://github.com/your-repo/my-backend-yelp.git
+$> git clone https://github.com/yusufaa99/my_yelp.git
 $> cd my-backend-yelp
 
 2️⃣ Install dependencies
