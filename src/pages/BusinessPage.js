@@ -13,6 +13,7 @@ export default function BusinessPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  
   useEffect(() => {
     async function fetchBusiness() {
       setLoading(true);

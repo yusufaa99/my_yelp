@@ -13,6 +13,7 @@ export default function BusinessesPage() {
   const [userId, setUserId] = useState(null);
   const navigate = useNavigate();
 
+  
   useEffect(() => {
     async function fetchBusinesses() {
       setLoading(true);
