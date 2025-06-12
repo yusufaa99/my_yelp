@@ -1,0 +1,19 @@
+.businessList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+.loading {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+}
+
+.noResults {
+  text-align: center;
+  font-size: 18px;
+  color: red;
+}

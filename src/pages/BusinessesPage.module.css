@@ -1,0 +1,27 @@
+.businessesPage {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+  }
+  
+  .businessesPage h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .businessList {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .loading, .error, .noBusinesses {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #777;
+    margin-top: 20px;
+  }
+  

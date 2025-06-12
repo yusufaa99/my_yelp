@@ -1,0 +1,17 @@
+.businessPage {
+  padding: 40px 20px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.businessPage p {
+  text-align: center;
+  font-size: 18px;
+  color: #666;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  font-size: 18px;
+}

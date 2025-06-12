@@ -1,0 +1,122 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #d32323;
+  padding: 10px 20px;
+  color: white;
+  width: 100%;
+  justify-content: space-between;
+  position: fixed; /* ✅ Keeps navbar fixed at the top */
+  top: 0;
+  left: 0;
+  z-index: 1000; /* ✅ Ensures it stays above other elements */
+}
+
+.logo a {
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navLinks {
+  display: flex;
+  gap: 15px;
+}
+
+.navLinks a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.authButtons {
+  display: flex;
+  gap: 10px;
+}
+
+.loginBtn, .signupBtn, .logoutBtn {
+  background: white;
+  color: #d32323;
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.signupBtn {
+  background: #fff5f5;
+}
+
+.loginBtn:hover, .signupBtn:hover, .navLinks:hover {
+  background: #ffcccc;
+}
+
+/* Mobile Menu */
+.menuToggle {
+  display: none;
+  background: none;
+  color: white;
+  font-size: 24px;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navLinks {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    background: #d32323;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  .navLinks.open {
+    display: flex;
+  }
+
+  .menuToggle {
+    display: block;
+  }
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownToggle {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  color: white;
+  padding: 10px;
+}
+
+.dropdownMenu {
+  position: absolute;
+  background: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  padding: 5px;
+  z-index: 100;
+}
+
+.dropdownMenu a {
+  text-decoration: none;
+  color: black;
+  padding: 10px;
+  transition: background 0.2s ease-in-out;
+}
+
+.dropdownMenu a:hover {
+  background: #f5f5f5;
+}

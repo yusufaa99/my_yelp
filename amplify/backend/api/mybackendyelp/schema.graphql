@@ -1,0 +1,70 @@
+type User 
+@model 
+@auth(rules: [
+  { allow: owner }, # Users can ONLY edit their own profile
+  { allow: private, operations: [read] } # Any signed-in user can read profiles
+]) {
+  id: ID!
+  username: String!
+  email: String!
+  name: String
+  phoneNumber: String
+}
+
+type Business 
+@model 
+@auth(rules: [
+  { allow: public, operations: [read] }, 
+  { allow: owner, operations: [create, update, delete] }
+]) {
+  id: ID!
+  name: String!
+  category: String!
+  address: String!
+  location: String
+  phoneNumber: String
+  website: String
+  rating: Float
+  region: String!
+}
+
+
+type Review 
+@model 
+@auth(rules: [
+  { allow: owner, operations: [create, update, delete] }, # Only the author can edit/delete their review
+  { allow: public, operations: [read] } # Anyone can read reviews
+]) {
+  id: ID!
+  content: String!
+  rating: Int!
+  businessID: ID! @index(name: "byBusiness", sortKeyFields: ["createdAt"])
+  userID: ID! @index(name: "byUser", sortKeyFields: ["createdAt"])
+  createdAt: AWSDateTime!
+}
+
+type Favorite 
+@model 
+@auth(rules: [
+  { allow: owner, operations: [create, delete] }, # Users can only manage their own favorites
+  { allow: private, operations: [read] } # Signed-in users can view favorites
+]) {
+  id: ID!
+  businessID: ID! @index(name: "byBusiness", sortKeyFields: ["createdAt"])
+  userID: ID! @index(name: "byUser", sortKeyFields: ["createdAt"])
+  createdAt: AWSDateTime!
+}
+
+type Reservation 
+@model 
+@auth(rules: [
+  { allow: owner, operations: [create, update, delete] }, # Users can only manage their own reservations
+  { allow: private, operations: [read] } # Signed-in users can view reservations
+]) {
+  id: ID!
+  businessID: ID! @index(name: "byBusiness", sortKeyFields: ["createdAt"])
+  userID: ID! @index(name: "byUser", sortKeyFields: ["createdAt"])
+  dateTime: AWSDateTime!
+  status: String!
+  createdAt: AWSDateTime!
+}

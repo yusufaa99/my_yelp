@@ -1,0 +1,25 @@
+.rating {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #ffc107;
+  }
+  
+  .star {
+    font-size: 18px;
+  }
+  
+  
+  .ratingWrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .ratingText {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  

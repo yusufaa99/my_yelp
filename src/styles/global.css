@@ -1,0 +1,102 @@
+/* Global Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  color: #222;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: #d32323;
+}
+
+/* Buttons */
+button {
+  cursor: pointer;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+.btn-primary {
+  background-color: #d32323;
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #a81818;
+}
+
+.btn-secondary {
+  background-color: #fff;
+  color: #d32323;
+  border: 1px solid #d32323;
+}
+
+.btn-secondary:hover {
+  background-color: #f1f1f1;
+}
+
+/* Forms */
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+input:focus, textarea:focus {
+  border-color: #d32323;
+  outline: none;
+  box-shadow: 0 0 5px rgba(211, 35, 35, 0.5);
+}
+
+/* Utility Classes */
+.hidden {
+  display: none !important;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-container {
+  padding-top: 70px; /* Leaves space below the navbar */
+  padding-bottom: 70px; /* Leaves space above the footer */
+}

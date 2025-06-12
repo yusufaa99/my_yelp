@@ -1,0 +1,18 @@
+.addToFavorites {
+  background-color: #d32323;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  transition: background 0.2s ease-in-out;
+}
+
+.addToFavorites:hover {
+  background-color: #a81818;
+}
+
+.addToFavorites:disabled {
+  background-color: #888;
+  cursor: not-allowed;
+}

@@ -1,0 +1,12 @@
+{
+  "resourceName": "backendyelp",
+  "policyUUID": "c13dcd5c",
+  "bucketName": "mybackendyelpc6d0b4f9a69544f49075c73d4b64deff",
+  "storageAccess": "auth",
+  "guestAccess": [],
+  "authAccess": [
+    "CREATE_AND_UPDATE"
+  ],
+  "triggerFunction": "NONE",
+  "groupAccess": {}
+}

@@ -1,0 +1,16 @@
+.searchResultList {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px;
+}
+
+.loading, .noResults {
+  text-align: center;
+  font-size: 18px;
+  color: #555;
+}
+
+.noResults {
+  color: red;
+}
